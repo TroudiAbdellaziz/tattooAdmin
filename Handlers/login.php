@@ -20,6 +20,8 @@ $query = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($query)>0)
 {
+    $result = $query->fetch_assoc();
+    $_SESSION['firstName']= $result['firstname'];
     $_SESSION['logged']=true;
     $_SESSION['email']=$email;
     header("Location: http://localhost/admin_tatoo_shop/");

@@ -9,6 +9,7 @@ if(isset($_SESSION['logged']))
     {
         $logged = true;
         $email=$_SESSION['email'];
+        $name=$_SESSION['firstName'];
     }
 }
 if(isset($_SESSION['flash'])){
